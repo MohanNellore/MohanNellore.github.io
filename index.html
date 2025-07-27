@@ -146,83 +146,47 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Mohan Nellore</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Graduate  ',
-						'Data Analyst  ',
-						'Fresher   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>Aspiring Data Analyst</h2>
-						
-			            <p><a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-4"
-   onclick="gtag('event', 'linkedin_click', {
-     event_category: 'social',
-     event_label: 'LinkedIn Button'
-   });">
-   Linkedin
-</a>
-
-							<a href="https://github.com/MohanNellore" class="btn btn-white btn-outline-white py-3 px-4"
-   onclick="gtag('event', 'github_click', {
-     event_category: 'social',
-     event_label: 'GitHub Button'
-   });">
-   My works
-</a>
-</p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+	  <!-- ✅ HERO SECTION START -->
+<section class="hero-wrap js-fullheight" id="home-section" style="background: linear-gradient(to right, #000000, #1a1a1a);">
+  <div class="container">
+    <div class="row no-gutters js-fullheight align-items-center justify-content-center text-center">
+      <div class="col-md-8 ftco-animate">
+        
+        <!-- Small Intro -->
+        <span class="subheading" style="color: #f0c419; font-size: 20px; font-weight: 500;">Hello!</span>
+        
+        <!-- Name -->
+        <h1 class="mb-4 mt-3" style="font-size: 60px; font-weight: 800; color: #fff;">
+          I'm <span style="color: #f0c419;">Mohan Nellore</span>
+        </h1>
+        
+        <!-- Profession -->
+        <h2 class="mb-4" style="font-size: 26px; font-weight: 400; color: #ddd;">
+          Aspiring Data Analyst
+        </h2>
+        
+        <!-- Optional Tagline -->
+        <p class="tagline" style="font-size: 18px; color: #f0c419; margin-bottom: 30px;">
+          Passionate about turning data into insights
+        </p>
+        
+        <!-- Buttons -->
+        <p>
+          <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-5" 
+             style="background-color: #f0c419; color: black; border-radius: 50px; font-weight: bold; border: none;">
+             LinkedIn
+          </a>
+          
+          <a href="https://github.com/MohanNellore" class="btn py-3 px-5"
+             style="background-color: transparent; color: white; border: 2px solid white; border-radius: 50px; font-weight: bold;">
+             My Works
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ✅ HERO SECTION END -->
 
 
 
