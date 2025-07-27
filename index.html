@@ -172,22 +172,32 @@
         
         <!-- Buttons -->
         <p>
-          <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-5" 
-             style="background-color: #f0c419; color: black; border-radius: 50px; font-weight: bold; border: none;">
-             LinkedIn
-          </a>
-          
-          <a href="https://github.com/MohanNellore" class="btn py-3 px-5"
-             style="background-color: transparent; color: white; border: 2px solid white; border-radius: 50px; font-weight: bold;">
-             My Works
-          </a>
-        </p>
+  <!-- LinkedIn Button with GA Tracking -->
+  <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-5"
+     style="background-color: #f0c419; color: black; border-radius: 50px; font-weight: bold; border: none;"
+     onclick="gtag('event', 'linkedin_click', {
+       event_category: 'social',
+       event_label: 'LinkedIn Button'
+     });">
+     LinkedIn
+  </a>
+
+  <!-- GitHub Button (My Works) with GA Tracking -->
+  <a href="https://github.com/MohanNellore" class="btn py-3 px-5"
+     style="background-color: transparent; color: white; border: 2px solid white; border-radius: 50px; font-weight: bold;"
+     onclick="gtag('event', 'github_click', {
+       event_category: 'social',
+       event_label: 'GitHub Button'
+     });">
+     My Works
+  </a>
+</p>
+
       </div>
     </div>
   </div>
 </section>
 <!-- ✅ HERO SECTION END -->
-
 
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
