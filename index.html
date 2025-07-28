@@ -146,53 +146,60 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <!-- ✅ HERO SECTION START -->
+	  
+<!-- ✅ HERO SECTION START -->
 <section class="hero-wrap js-fullheight" id="home-section" style="background: linear-gradient(to right, #000000, #1a1a1a);">
   <div class="container">
-    <div class="row no-gutters js-fullheight align-items-center justify-content-center text-center">
-      <div class="col-md-8 ftco-animate">
+    <div class="row no-gutters js-fullheight align-items-center">
+      
+      <!-- LEFT SIDE: PHOTO -->
+      <div class="col-md-5 text-center">
+        <img src="images/mohan.png" alt="Mohan Nellore" 
+             style="width: 300px; height: 300px; border-radius: 50%; border: 5px solid #f0c419; margin-bottom: 20px;">
+      </div>
+
+      <!-- RIGHT SIDE: INTRO + DETAILS -->
+      <div class="col-md-7 ftco-animate d-flex flex-column justify-content-center text-left">
         
-        <!-- Small Intro -->
+        <!-- Greeting + Name -->
         <span class="subheading" style="color: #f0c419; font-size: 20px; font-weight: 500;">Hello!</span>
-        
-        <!-- Name -->
-        <h1 class="mb-4 mt-3" style="font-size: 60px; font-weight: 800; color: #fff;">
+        <h1 class="mb-3 mt-3" style="font-size: 50px; font-weight: 800; color: #fff;">
           I'm <span style="color: #f0c419;">Mohan Nellore</span>
         </h1>
         
-        <!-- Profession -->
-        <h2 class="mb-4" style="font-size: 26px; font-weight: 400; color: #ddd;">
+        <!-- Tagline -->
+        <h2 class="mb-3" style="font-size: 24px; font-weight: 400; color: #ddd;">
           Aspiring Data Analyst
         </h2>
         
-        <!-- Optional Tagline -->
-        <p class="tagline" style="font-size: 18px; color: #f0c419; margin-bottom: 30px;">
-          Passionate about turning data into insights
+        <!-- Details -->
+        <p style="font-size: 18px; color: #fff; margin-top: 10px;">
+          <strong>Experience:</strong> Fresher <br>
+          <strong>Address:</strong> Nellore, Andhra Pradesh, India
         </p>
-        
-        <!-- Buttons -->
-        <p>
-  <!-- LinkedIn Button with GA Tracking -->
-  <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-5"
-     style="background-color: #f0c419; color: black; border-radius: 50px; font-weight: bold; border: none;"
-     onclick="gtag('event', 'linkedin_click', {
-       event_category: 'social',
-       event_label: 'LinkedIn Button'
-     });">
-     LinkedIn
-  </a>
 
-  <!-- GitHub Button (My Works) with GA Tracking -->
-  <a href="https://github.com/MohanNellore" class="btn py-3 px-5"
-     style="background-color: transparent; color: white; border: 2px solid white; border-radius: 50px; font-weight: bold;"
-     onclick="gtag('event', 'github_click', {
-       event_category: 'social',
-       event_label: 'GitHub Button'
-     });">
-     My Works
-  </a>
-</p>
-
+        <!-- Buttons with Google Analytics tracking -->
+        <p style="margin-top: 20px;">
+          <!-- LinkedIn Button -->
+          <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-5" 
+             style="background-color: #f0c419; color: black; border-radius: 50px; font-weight: bold; border: none;"
+             onclick="gtag('event', 'linkedin_click', {
+               event_category: 'social',
+               event_label: 'LinkedIn Button'
+             });">
+             LinkedIn
+          </a>
+          
+          <!-- My Works (GitHub) Button -->
+          <a href="https://github.com/MohanNellore" class="btn py-3 px-5"
+             style="background-color: transparent; color: white; border: 2px solid white; border-radius: 50px; font-weight: bold;"
+             onclick="gtag('event', 'github_click', {
+               event_category: 'social',
+               event_label: 'GitHub Button'
+             });">
+             My Works
+          </a>
+        </p>
       </div>
     </div>
   </div>
