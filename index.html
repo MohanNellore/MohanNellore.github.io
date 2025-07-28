@@ -148,54 +148,45 @@
 	  </nav>
 	  
 <!-- ✅ HERO SECTION START -->
-<section class="hero-wrap js-fullheight" id="home-section" style="background: linear-gradient(to right, #000000, #1a1a1a);">
+<section class="hero-wrap js-fullheight" id="home-section" style="background: linear-gradient(to right, #000000, #1a1a1a); padding-bottom: 60px;">
   <div class="container">
-    <div class="row no-gutters js-fullheight align-items-center">
+    <div class="row no-gutters js-fullheight align-items-center text-center text-md-left">
       
       <!-- LEFT SIDE: PHOTO -->
-      <div class="col-md-5 text-center">
-        <img src="images/about-me.png" alt="Mohan Nellore" 
-             style="width: 300px; height: 300px; border-radius: 50%; border: 5px solid #f0c419; margin-bottom: 20px;">
+      <div class="col-md-5 d-flex justify-content-center mb-4 mb-md-0">
+        <img src="images/about-me.png" alt="Mohan Nellore" class="hero-img fade-in">
       </div>
 
       <!-- RIGHT SIDE: INTRO + DETAILS -->
-      <div class="col-md-7 ftco-animate d-flex flex-column justify-content-center text-left">
+      <div class="col-md-7 ftco-animate d-flex flex-column justify-content-center text-center text-md-left fade-in-text">
         
         <!-- Greeting + Name -->
-        <span class="subheading" style="color: #f0c419; font-size: 20px; font-weight: 500;">Hello!</span>
-        <h1 class="mb-3 mt-3" style="font-size: 50px; font-weight: 800; color: #fff;">
-          I'm <span style="color: #f0c419;">Mohan Nellore</span>
-        </h1>
+        <span class="subheading fade-in-delay-1">Hello!</span>
+        <h1 class="mb-3 mt-3 fade-in-delay-2">I'm <span class="highlight">Mohan Nellore</span></h1>
         
         <!-- Tagline -->
-        <h2 class="mb-3" style="font-size: 24px; font-weight: 400; color: #ddd;">
-          Aspiring Data Analyst
-        </h2>
+        <h2 class="mb-3 fade-in-delay-3">Aspiring Data Analyst</h2>
         
         <!-- Details -->
-        <p style="font-size: 18px; color: #fff; margin-top: 10px;">
+        <p class="hero-details fade-in-delay-4">
           <strong>Experience:</strong> Fresher <br>
           <strong>Address:</strong> Hyderabad, Telangana, India
         </p>
 
-        <!-- Buttons with Google Analytics tracking -->
-        <p style="margin-top: 20px;">
-          <!-- LinkedIn Button -->
-          <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary py-3 px-5" 
-             style="background-color: #f0c419; color: black; border-radius: 50px; font-weight: bold; border: none;"
+        <!-- Buttons -->
+        <p class="hero-buttons fade-in-delay-5">
+          <a href="https://www.linkedin.com/in/mohan-nlr" class="btn btn-primary linkedin-btn" 
              onclick="gtag('event', 'linkedin_click', {
                event_category: 'social',
-               event_label: 'LinkedIn Button'
+               event_label: 'LinkedIn Button (Hero)'
              });">
              LinkedIn
           </a>
           
-          <!-- My Works (GitHub) Button -->
-          <a href="https://github.com/MohanNellore" class="btn py-3 px-5"
-             style="background-color: transparent; color: white; border: 2px solid white; border-radius: 50px; font-weight: bold;"
+          <a href="https://github.com/MohanNellore" class="btn myworks-btn"
              onclick="gtag('event', 'github_click', {
                event_category: 'social',
-               event_label: 'GitHub Button'
+               event_label: 'GitHub Button (Hero)'
              });">
              My Works
           </a>
@@ -205,6 +196,8 @@
   </div>
 </section>
 <!-- ✅ HERO SECTION END -->
+
+
 
 <!-- ✅ ABOUT ME SECTION START -->
 <section class="ftco-about ftco-section" id="about-section">
