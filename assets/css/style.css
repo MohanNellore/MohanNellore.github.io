@@ -231,16 +231,6 @@ mark {
   mask-image: linear-gradient(to bottom, #000 50%, transparent);
 }
 
-.hero__grid {
-  display: grid;
-  gap: clamp(2rem, 5vw, 3.5rem);
-  align-items: center;
-}
-
-@media (min-width: 960px) {
-  .hero__grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); }
-}
-
 .status {
   display: flex;
   align-items: center;
@@ -260,7 +250,7 @@ mark {
 }
 
 .hero h1 {
-  margin: clamp(1.25rem, 3vw, 2rem) 0 1.25rem;
+  margin: clamp(1.25rem, 3vw, 2rem) 0 1rem;
   font-family: var(--sans);
   font-weight: 800;
   font-size: clamp(3.5rem, 10.5vw, 7rem);
@@ -273,7 +263,15 @@ mark {
 .hero h1 span { display: block; }
 
 @media (min-width: 960px) {
-  .hero h1 { font-size: clamp(5rem, 8.2vw, 7.25rem); }
+  .hero h1 { font-size: clamp(5.5rem, 10vw, 9rem); }
+}
+
+.role {
+  margin-bottom: 1.25rem;
+  font: 600 clamp(1.5rem, 3.4vw, 2.25rem)/1.15 var(--sans);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  color: var(--ink);
 }
 
 .lead {
@@ -307,58 +305,8 @@ mark {
 }
 .quick-links a:hover { text-decoration-thickness: 2px; }
 
-/* ---------- Hero chart ---------- */
-.chart {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: clamp(1rem, 2.5vw, 1.5rem);
-}
-
-.chart__pair {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem 1.25rem;
-}
-
-.chart__svg { width: 100%; height: auto; overflow: visible; }
-
-.chart__pair { padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-
-.chart figcaption {
-  margin-top: 0.85rem;
-  max-width: 42em;
-  font: italic 400 0.9375rem/1.5 var(--serif);
-  color: var(--muted);
-}
-
-.c-title { font: 600 18px var(--sans); fill: var(--ink); }
-.c-x { font: 500 16px var(--sans); fill: var(--muted); text-anchor: middle; }
-.c-val { font: 700 22px var(--sans); text-anchor: middle; font-variant-numeric: tabular-nums; }
-.c-val--ink { fill: var(--ink); }
-.c-val--white { fill: #fff; }
-.c-base { stroke: var(--ink); stroke-width: 1.5; }
-.c-ref { stroke: var(--ink-soft); stroke-width: 1.5; stroke-dasharray: 4 4; }
-.c-bar--soft { fill: var(--chart-soft); }
-.c-bar--ink { fill: var(--ink); }
-.c-tag rect { fill: var(--mark); }
-.c-tag text { font: 700 17px var(--sans); fill: var(--ink); text-anchor: middle; }
-
-/* The page's one orchestrated moment: the bars grow, then the numbers land. */
-.c-bar {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  animation: grow 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0s) both;
-}
-.c-val { animation: fade 0.4s ease 0.95s both; }
-.c-tag { animation: fade 0.4s ease 1.25s both; }
-
-@keyframes grow { from { transform: scaleY(0); } }
-@keyframes fade { from { opacity: 0; } }
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .c-bar, .c-val, .c-tag { animation: none; }
 }
 
 /* ---------- Sections ---------- */
@@ -514,6 +462,11 @@ h3 {
 .project__thumb .area { fill: var(--chart-soft); opacity: 0.55; }
 .project__thumb .line { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
 .project__thumb .dot { fill: var(--mark); stroke: var(--ink); stroke-width: 2; }
+.project__thumb .node { fill: var(--surface); stroke: var(--ink); stroke-width: 1.5; }
+.project__thumb .node--hi { fill: var(--mark); }
+.project__thumb .conn path { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.project__thumb .arrow path { fill: var(--ink); }
+.project__thumb .t { font: 600 13px var(--sans); fill: var(--ink); text-anchor: middle; dominant-baseline: central; }
 
 /* ---------- Education ---------- */
 .edu { width: 100%; border-collapse: collapse; text-align: left; }
@@ -636,7 +589,6 @@ h3 {
 @media print {
   .site-header, .site-footer, .form, .actions, .quick-links, .skip { display: none; }
   .hero::before { display: none; }
-  .c-bar, .c-val, .c-tag { animation: none; }
   .section { break-inside: avoid; border-top-color: #999; }
   body { background: #fff; }
 }
