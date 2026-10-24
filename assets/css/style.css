@@ -231,6 +231,8 @@ mark {
   mask-image: linear-gradient(to bottom, #000 50%, transparent);
 }
 
+.hero__grid { display: grid; gap: 1.5rem; }
+
 .hero__copy {
   display: flex;
   flex-direction: column;
@@ -238,17 +240,17 @@ mark {
   text-align: center;
 }
 
-.status {
+/* Photo and location: centered above the name on phones, large on the right on wide screens. */
+.portrait {
+  order: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.9rem;
-  font: 500 1rem/1.5 var(--sans);
-  color: var(--muted);
+  text-align: center;
 }
-.status p { text-wrap: balance; }
 
-.avatar {
+.portrait__img {
   width: 112px;
   height: 112px;
   border-radius: 50%;
@@ -257,9 +259,16 @@ mark {
   background: #fff;
 }
 
+.portrait__cap {
+  display: grid;
+  font: 500 1rem/1.5 var(--sans);
+  color: var(--muted);
+}
+.portrait__status { text-wrap: balance; }
+
 /* Normal width and a text-size optical cut keep the letters of the name clearly separate. */
 .hero h1 {
-  margin: clamp(1.25rem, 3vw, 1.75rem) 0 0.75rem;
+  margin: 0 0 0.75rem;
   font-family: var(--sans);
   font-weight: 700;
   font-size: clamp(2.75rem, 9.5vw, 6.5rem);
@@ -311,6 +320,40 @@ mark {
   text-underline-offset: 0.25em;
 }
 .quick-links a:hover { text-decoration-thickness: 2px; }
+
+@media (min-width: 960px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero__copy { align-items: flex-start; text-align: left; }
+  .hero h1 { font-size: clamp(4.5rem, 8vw, 7.25rem); }
+  .hero h1 span { display: block; }
+  .actions, .quick-links { justify-content: flex-start; }
+
+  .portrait {
+    order: 0;
+    justify-self: center;
+    width: 100%;
+    max-width: 360px;
+    padding: 16px;
+    gap: 0;
+  }
+  .portrait__img {
+    width: 100%;
+    height: auto;
+    border: 0;
+    box-shadow: 0 0 0 1px var(--line-strong), 0 0 0 14px var(--surface), 0 0 0 15px var(--line);
+  }
+  .portrait__cap { margin-top: 2.25rem; gap: 0.4rem; }
+  .portrait__place {
+    font: 600 1.5rem/1.25 var(--sans);
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .portrait__status { max-width: 20em; margin-inline: auto; font-size: 1.0625rem; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
