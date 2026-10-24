@@ -42,7 +42,7 @@
     "name": "Mohan Nellore",
     "jobTitle": "GCP Data Engineer and Data Analyst",
     "url": "https://mohannellore.github.io/",
-    "image": "https://mohannellore.github.io/assets/img/avatar.webp",
+    "image": "https://mohannellore.github.io/assets/img/portrait.webp",
     "sameAs": [
       "https://www.linkedin.com/in/MohanNellore",
       "https://github.com/MohanNellore"
@@ -77,9 +77,10 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -90,7 +91,7 @@
 
     <!-- Hero -->
     <section class="hero" id="top" aria-labelledby="name">
-      <div class="wrap">
+      <div class="wrap hero__grid">
         <div class="hero__copy">
           <div class="status">
             <img class="avatar" src="assets/img/avatar.webp" width="72" height="72" alt="Portrait of Mohan Nellore">
@@ -114,6 +115,11 @@
             <li><a href="mailto:mohannellore17@gmail.com" data-track="contact_email" data-category="contact" data-label="Email Click (Hero)"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a></li>
           </ul>
         </div>
+
+        <figure class="portrait">
+          <img class="portrait__img" src="assets/img/portrait.webp" width="466" height="466" alt="Portrait of Mohan Nellore">
+          <figcaption class="portrait__cap">Messy data in.<br>Clean, queryable tables out.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -157,34 +163,64 @@
       </div>
     </section>
 
-    <!-- Experience -->
-    <section class="section" id="experience" aria-labelledby="experience-h">
+    <!-- Education -->
+    <section class="section" id="education" aria-labelledby="education-h">
       <div class="wrap split">
-        <h2 id="experience-h" class="split__title">Experience</h2>
-        <div class="split__body timeline">
-          <article class="entry">
-            <p class="entry__when">May to July 2025</p>
-            <div class="entry__main">
-              <h3>Data analyst intern</h3>
-              <p class="entry__where">Kapil IT Skill Hub, Hyderabad</p>
-              <ul class="entry__list">
-                <li>Analyzed Central Pollution Control Board (CPCB) datasets on air and water quality across Indian cities.</li>
-                <li>Built Power BI and Excel dashboards for city-wise and time-series pollution monitoring.</li>
-                <li>Automated ETL workflows in Python to streamline data processing.</li>
-                <li>Cut reporting time by <mark>30%</mark> and improved data efficiency by <mark>25%</mark>.</li>
-              </ul>
-              <p><a href="https://drive.google.com/file/d/1SBe-zcYC6OCMe_F9r3cW6BuyNyjOYFjX/view?usp=drive_link" target="_blank" rel="noopener" data-track="certificate_click" data-category="engagement" data-cert="Internship Certificate">View internship certificate<span class="sr-only"> (opens in a new tab)</span></a></p>
-            </div>
-          </article>
+        <h2 id="education-h" class="split__title">Education</h2>
+        <div class="split__body">
+          <table class="edu">
+            <thead>
+              <tr><th scope="col">Qualification</th><th scope="col">Institution</th><th scope="col">Years</th><th scope="col" class="num">CGPA</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-label="Qualification">B.Tech, Electronics and Communication Engineering</th>
+                <td data-label="Institution">Narayana Engineering College, Gudur</td>
+                <td data-label="Years">2020 to 2024</td>
+                <td data-label="CGPA" class="num">7.79 / 10</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Qualification">Higher secondary school</th>
+                <td data-label="Institution">Sri Chaitanya Junior College, Nellore</td>
+                <td data-label="Years">2018 to 2020</td>
+                <td data-label="CGPA" class="num">8.46 / 10</td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Qualification">Secondary School Certificate</th>
+                <td data-label="Institution">Ravindra Bharathi (EM) High School, Nellore</td>
+                <td data-label="Years">2018</td>
+                <td data-label="CGPA" class="num">9.0 / 10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-          <article class="entry">
-            <p class="entry__when">October 2024 to May 2025</p>
-            <div class="entry__main">
-              <h3>Data Science certification</h3>
-              <p class="entry__where">Kapil IT Skill Hub, Hyderabad</p>
-              <p><a href="https://drive.google.com/file/d/1l959lN70iRhXNy3rAlHop9GsG7nUYWsx/view?usp=drive_link" target="_blank" rel="noopener" data-track="certificate_click" data-category="engagement" data-cert="Data Science Certificate">View certificate<span class="sr-only"> (opens in a new tab)</span></a></p>
-            </div>
-          </article>
+    <!-- Certifications -->
+    <section class="section" id="certifications" aria-labelledby="certifications-h">
+      <div class="wrap split">
+        <h2 id="certifications-h" class="split__title">Certifications</h2>
+        <div class="split__body">
+          <table class="edu">
+            <thead>
+              <tr><th scope="col">Certificate</th><th scope="col">Issuer</th><th scope="col">Period</th><th scope="col" class="num">Link</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-label="Certificate">Data Science</th>
+                <td data-label="Issuer">Kapil IT Skill Hub, Hyderabad</td>
+                <td data-label="Period">October 2024 to May 2025</td>
+                <td data-label="Link" class="num"><a href="https://drive.google.com/file/d/1l959lN70iRhXNy3rAlHop9GsG7nUYWsx/view?usp=drive_link" target="_blank" rel="noopener" data-track="certificate_click" data-category="engagement" data-cert="Data Science Certificate">View certificate<span class="sr-only"> (opens in a new tab)</span></a></td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Certificate">Data analyst internship</th>
+                <td data-label="Issuer">Kapil IT Skill Hub, Hyderabad</td>
+                <td data-label="Period">May to July 2025</td>
+                <td data-label="Link" class="num"><a href="https://drive.google.com/file/d/1SBe-zcYC6OCMe_F9r3cW6BuyNyjOYFjX/view?usp=drive_link" target="_blank" rel="noopener" data-track="certificate_click" data-category="engagement" data-cert="Internship Certificate">View certificate<span class="sr-only"> (opens in a new tab)</span></a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -241,36 +277,25 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="section" id="education" aria-labelledby="education-h">
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-h">
       <div class="wrap split">
-        <h2 id="education-h" class="split__title">Education</h2>
-        <div class="split__body">
-          <table class="edu">
-            <thead>
-              <tr><th scope="col">Qualification</th><th scope="col">Institution</th><th scope="col">Years</th><th scope="col" class="num">CGPA</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" data-label="Qualification">B.Tech, Electronics and Communication Engineering</th>
-                <td data-label="Institution">Narayana Engineering College, Gudur</td>
-                <td data-label="Years">2020 to 2024</td>
-                <td data-label="CGPA" class="num">7.79 / 10</td>
-              </tr>
-              <tr>
-                <th scope="row" data-label="Qualification">Higher secondary school</th>
-                <td data-label="Institution">Sri Chaitanya Junior College, Nellore</td>
-                <td data-label="Years">2018 to 2020</td>
-                <td data-label="CGPA" class="num">8.46 / 10</td>
-              </tr>
-              <tr>
-                <th scope="row" data-label="Qualification">Secondary School Certificate</th>
-                <td data-label="Institution">Ravindra Bharathi (EM) High School, Nellore</td>
-                <td data-label="Years">2018</td>
-                <td data-label="CGPA" class="num">9.0 / 10</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2 id="experience-h" class="split__title">Experience</h2>
+        <div class="split__body timeline">
+          <article class="entry">
+            <p class="entry__when">May to July 2025</p>
+            <div class="entry__main">
+              <h3>Data analyst intern</h3>
+              <p class="entry__where">Kapil IT Skill Hub, Hyderabad</p>
+              <ul class="entry__list">
+                <li>Analyzed Central Pollution Control Board (CPCB) datasets on air and water quality across Indian cities.</li>
+                <li>Built Power BI and Excel dashboards for city-wise and time-series pollution monitoring.</li>
+                <li>Automated ETL workflows in Python to streamline data processing.</li>
+                <li>Cut reporting time by <mark>30%</mark> and improved data efficiency by <mark>25%</mark>.</li>
+              </ul>
+              <p><a href="https://drive.google.com/file/d/1SBe-zcYC6OCMe_F9r3cW6BuyNyjOYFjX/view?usp=drive_link" target="_blank" rel="noopener" data-track="certificate_click" data-category="engagement" data-cert="Internship Certificate">View internship certificate<span class="sr-only"> (opens in a new tab)</span></a></p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
