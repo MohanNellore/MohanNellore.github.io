@@ -9,7 +9,7 @@ index.html            The page (content lives here)
 404.html              Not-found page
 assets/css/style.css  All styles, with design tokens at the top of the file
 assets/js/main.js     Menu, active-section marker, analytics events, contact form
-assets/img/           Avatar, favicon, social share image
+assets/img/           Portrait, favicon, social share image
 ```
 
 There is no build step and no dependencies. Open `index.html` in a browser to preview it.
