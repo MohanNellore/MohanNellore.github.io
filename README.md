@@ -1,0 +1,27 @@
+# Mohan Nellore, portfolio
+
+Source for [mohannellore.github.io](https://mohannellore.github.io/): a single-page portfolio for an entry-level data analyst.
+
+## Structure
+
+```
+index.html            The page (content lives here)
+404.html              Not-found page
+assets/css/style.css  All styles, with design tokens at the top of the file
+assets/js/main.js     Menu, active-section marker, analytics events, contact form
+assets/img/           Avatar, favicon, social share image
+```
+
+There is no build step and no dependencies. Open `index.html` in a browser to preview it.
+
+## Editing
+
+- **Content:** edit the text in `index.html`. Each section has its own `<section>` with an `id`.
+- **Colors and fonts:** change the variables in the `:root` block at the top of `assets/css/style.css`.
+- **Add a project:** copy an `<article class="project">` block in the Projects section. Each project uses a small inline SVG chart in place of a screenshot; swap in a screenshot with an `<img>` if you prefer.
+- **Analytics:** links with a `data-track` attribute send a Google Analytics event when clicked. The event names match the previous version of the site.
+- **Contact form:** posts to Formspree (`action` on the `<form>`). It includes a honeypot field to filter spam.
+
+## Fonts
+
+Bricolage Grotesque and Source Serif 4 load from Google Fonts. If they fail to load, the page falls back to system fonts.
