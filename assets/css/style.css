@@ -231,6 +231,8 @@ mark {
   mask-image: linear-gradient(to bottom, #000 50%, transparent);
 }
 
+.hero__grid { display: grid; gap: 2rem; }
+
 .status {
   display: flex;
   align-items: center;
@@ -252,10 +254,10 @@ mark {
 .hero h1 {
   margin: clamp(1.25rem, 3vw, 2rem) 0 1rem;
   font-family: var(--sans);
-  font-weight: 800;
+  font-weight: 750;
   font-size: clamp(3.5rem, 10.5vw, 7rem);
   line-height: 0.88;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.01em;
   font-stretch: 75%;
   font-variation-settings: "wdth" 75;
   color: var(--ink);
@@ -264,6 +266,42 @@ mark {
 
 @media (min-width: 960px) {
   .hero h1 { font-size: clamp(5.5rem, 10vw, 9rem); }
+}
+
+/* Portrait and headline: shown beside the copy on wide screens; phones use the small avatar. */
+.portrait { display: none; }
+
+@media (min-width: 960px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 3rem;
+    align-items: center;
+  }
+  .status .avatar { display: none; }
+  .portrait {
+    display: block;
+    justify-self: center;
+    width: 100%;
+    max-width: 360px;
+    padding: 16px;
+    text-align: center;
+  }
+}
+
+.portrait__img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 0 0 1px var(--line-strong), 0 0 0 14px var(--surface), 0 0 0 15px var(--line);
+}
+
+.portrait__cap {
+  margin: 2.25rem auto 0;
+  font: 600 1.375rem/1.3 var(--sans);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  color: var(--ink);
 }
 
 .role {
