@@ -208,59 +208,6 @@
     counters.forEach(function (el) { countIO.observe(el); });
   }
 
-  // Project filter by tool
-  var filter = document.querySelector('.filter');
-  var projects = all('.project[data-tools]');
-  if (filter && projects.length) {
-    var chips = all('.chip', filter);
-    var filterStatus = filter.querySelector('.filter__status');
-
-    var usesTool = function (project, tool) {
-      return (' ' + project.getAttribute('data-tools') + ' ').indexOf(' ' + tool + ' ') > -1;
-    };
-
-    chips.forEach(function (chip) {
-      var tool = chip.getAttribute('data-filter');
-      var count = tool === 'all' ? projects.length : projects.filter(function (p) { return usesTool(p, tool); }).length;
-      var badge = document.createElement('span');
-      badge.className = 'chip__n';
-      badge.setAttribute('aria-hidden', 'true');
-      badge.textContent = count;
-      chip.appendChild(badge);
-    });
-
-    var setFilter = function (tool, label) {
-      chips.forEach(function (chip) {
-        chip.setAttribute('aria-pressed', String(chip.getAttribute('data-filter') === tool));
-      });
-      var visible = [];
-      projects.forEach(function (p) {
-        var show = tool === 'all' || usesTool(p, tool);
-        p.hidden = !show;
-        p.classList.remove('is-first', 'is-last');
-        if (show) visible.push(p);
-      });
-      // The first and last visible project drop their outer rule and padding.
-      if (visible.length) {
-        visible[0].classList.add('is-first');
-        visible[visible.length - 1].classList.add('is-last');
-      }
-      filterStatus.textContent = tool === 'all'
-        ? ''
-        : 'Showing ' + visible.length + ' of ' + projects.length + ' projects that use ' + label + '.';
-    };
-
-    filter.hidden = false;
-    filter.addEventListener('click', function (e) {
-      var chip = e.target.closest('.chip');
-      if (!chip) return;
-      var tool = chip.getAttribute('data-filter');
-      var label = chip.firstChild.textContent;
-      setFilter(tool, label);
-      track('project_filter', { event_category: 'engagement', event_label: label });
-    });
-  }
-
   // Pipeline explorer and quality-gate demo
   var lab = document.querySelector('.project__lab');
   if (lab) {

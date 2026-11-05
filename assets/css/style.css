@@ -556,8 +556,8 @@ h3 {
   padding-block: 2rem;
   border-top: 1px solid var(--line);
 }
-.project:first-of-type, .project.is-first { padding-top: 0; border-top: 0; }
-.project:last-of-type, .project.is-last { padding-bottom: 0; }
+.project:first-child { padding-top: 0; border-top: 0; }
+.project:last-child { padding-bottom: 0; }
 
 @media (min-width: 700px) {
   .project { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
@@ -582,12 +582,9 @@ h3 {
   font: 600 0.875rem/1.4 var(--sans);
   color: var(--muted);
 }
-.project__result { font-weight: 500; }
 
 .project__thumb .g { fill: none; stroke: var(--line); stroke-width: 1; }
 .project__thumb .base { fill: none; stroke: var(--ink); stroke-width: 1.5; }
-.project__thumb .soft { fill: var(--chart-soft); }
-.project__thumb .hi { fill: var(--mark); stroke: var(--ink); stroke-width: 1.5; }
 .project__thumb .area { fill: var(--chart-soft); opacity: 0.55; }
 .project__thumb .line { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
 .project__thumb .dot { fill: var(--mark); stroke: var(--ink); stroke-width: 2; }
@@ -716,32 +713,7 @@ h3 {
   .reveal-ready .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* Project filter */
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
-}
-.filter__label { margin-right: 0.25rem; font: 600 0.875rem/1.2 var(--sans); color: var(--muted); }
-.filter__status { flex-basis: 100%; min-height: 1.4em; font: 500 0.875rem/1.4 var(--sans); color: var(--muted); }
-
-.chip {
-  min-height: 36px;
-  padding: 0.3rem 0.85rem;
-  border: 1.5px solid var(--ink);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
-  font: 600 0.875rem/1 var(--sans);
-  cursor: pointer;
-}
-.chip:hover { background: var(--hover); }
-.chip[aria-pressed="true"] { background: var(--mark); color: #0B1220; }
-.chip__n { margin-left: 0.35rem; font-weight: 500; opacity: 0.75; }
-
-.project[hidden], .filter[hidden], .theme-btn[hidden], .project__lab[hidden] { display: none; }
+.theme-btn[hidden], .project__lab[hidden] { display: none; }
 
 /* Pipeline explorer and quality-gate demo */
 .project__lab {
@@ -911,9 +883,8 @@ h3 {
 /* ---------- Print ---------- */
 @media print {
   .site-header, .site-footer, .form, .actions, .quick-links, .skip,
-  .filter, .project__lab, .copy { display: none; }
+  .project__lab, .copy { display: none; }
   .reveal-ready .reveal { opacity: 1; transform: none; }
-  .project[hidden] { display: grid; }
   .hero::before { display: none; }
   .section { break-inside: avoid; border-top-color: #999; }
   body { background: #fff; }
